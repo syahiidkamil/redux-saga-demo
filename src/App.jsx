@@ -1,21 +1,13 @@
-import { Button } from "@nextui-org/react";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./App.css";
 
-function Home() {
-  return (
-    <div>
-      <Button color="primary">Press me</Button>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
-  );
-}
+import SearchBarPageComponent from "./components/SearchBarPage.component";
+
+import "./App.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <SearchBarPageComponent />,
   },
 ]);
 
