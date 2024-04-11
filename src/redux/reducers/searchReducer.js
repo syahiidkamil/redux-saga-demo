@@ -2,6 +2,7 @@ import {
   SEARCH_REQUEST,
   SEARCH_SUCCESS,
   SEARCH_FAILURE,
+  SEARCH_CLEAR,
 } from "../actions/searchActions";
 
 const initialState = {
@@ -30,6 +31,11 @@ const searchReducer = (state = initialState, action) => {
         loading: false,
         error: action.payload,
       };
+    case SEARCH_CLEAR:
+        return {
+          ...state,
+          results: [], 
+        };
     default:
       return state;
   }

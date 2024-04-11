@@ -18,7 +18,11 @@ class FruitsAPI {
 
   searchFruits = async (query) => {
     const data = await this.fetchData(query);
-    const random = Math.floor(Math.random() * 500) + 1000;
+    const lowerCaseQuery = query.toLowerCase();
+    const random =
+      lowerCaseQuery === "b" || lowerCaseQuery === "k"
+        ? 5000
+        : Math.floor(Math.random() * 500) + 500;
     await this.#delay(random);
 
     const fruitNameList = search(query, data, {

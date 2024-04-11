@@ -1,6 +1,7 @@
 export const SEARCH_REQUEST = "SEARCH_REQUEST";
 export const SEARCH_SUCCESS = "SEARCH_SUCCESS";
 export const SEARCH_FAILURE = "SEARCH_FAILURE";
+export const SEARCH_CLEAR = "SEARCH_CLEAR";
 
 // for education purpose, we will not use these action creators
 export const searchRequest = (query) => ({
@@ -17,3 +18,8 @@ export const searchFailure = (error) => ({
   type: SEARCH_FAILURE,
   payload: error,
 });
+
+export const searchClear = () => ({
+  type: SEARCH_CLEAR,
+});
+
