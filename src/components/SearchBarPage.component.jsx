@@ -9,13 +9,13 @@ import {
 } from "@nextui-org/react";
 import {
   SEARCH_CLEAR,
-  SEARCH_FAILURE,
+  // SEARCH_FAILURE,
   SEARCH_REQUEST,
-  SEARCH_SUCCESS,
+  // SEARCH_SUCCESS,
 } from "../redux/actions/searchActions";
 import SearchIcon from "./Icons/SearchIcon.component";
 import styles from "./SearchBarPage.styles";
-import fruitsAPI from "../api/FruitsAPI";
+// import fruitsAPI from "../api/FruitsAPI";
 
 const SearchBarPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
